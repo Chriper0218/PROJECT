@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.container-dad {
+    margin: 2%;
+}
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacion {
+    background-color: rgba(128, 128, 128, 0.055);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(151, 151, 151);
+    width: 30%;
+}
+
+.target-informacion {
+    display: flex;
+    gap: 5px;
+}
+
+.target-informacion-siguenos img {
+    width: 30px;
+    height: auto;
+}
+
+.container-map {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 1%;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.mensaje{
+    background-color: rgba(128, 128, 128, 0.055);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(151, 151, 151);
+    width: 65%;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 17px;
+    padding: 10px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+#input-mensaje {
+    height: 75px;
+}
+
+#button-mensaje {
+    background-color: rgb(221, 170, 1);
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.05);}
+
+#button-mensaje:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    transform: scale(1.05);} 
