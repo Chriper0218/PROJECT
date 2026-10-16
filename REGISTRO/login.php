@@ -1,5 +1,5 @@
 <?php 
-include("../CONEXION/database.php");
+include("../INCLUDES../CONEXION/database.php");
 ?>
 
 <!DOCTYPE html>
@@ -33,23 +33,6 @@ include("../CONEXION/database.php");
 
 <?php 
     // GUARDAR DATOS EN LA BASE DE DATOS // 
-    if(isset($_POST["ENVIAR"])){
-
-        $NOMBRE = trim($_POST["NOMBRE"]);
-        $EMAIL = trim($_POST["EMAIL"]);
-        $NUMERO = trim($_POST["NUMERO"]);
-        $HASH = password_hash($PASSWORD, $HASH);
-
-
-    $SQL = "INSERT INTO users (NAME_USER, EMAIL_USER, NUMBER_USER, PASSWORD_USER)
-    VALUES
-    ('$NOMBRE','$EMAIL','$NUMERO','$HASH');";
-    
-    mysqli_query($CONN, $SQL);
-
-    header("location:../INICIO/index.php");
-    exit();}
-    
     // GUARDAR DATOS EN LA BASE DE DATOS //
 ?>
 

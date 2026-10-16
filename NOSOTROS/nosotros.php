@@ -1,5 +1,5 @@
 <?php 
-include("../HEADER/header.php")
+include("../INCLUDES../HEADER/header.php")
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +18,14 @@ include("../HEADER/header.php")
         <div class="container-items-nosotros">
             <h2>Sobre nosotros</h2>
             <h1>
-                <b>NUESTRA PASION</b> <br>
+                <b>NUESTRA PASIÓN</b> <br>
                 <b>ES LA AREPA</b>
             </h1>
             <p id="p-nosotros">
                 En ArepaMania creemos que la comida <br>
-                no solo se disfruta, se comparte. somos un <br>
-                emprendimiento dedicado a llevar el autentico <br>
-                sabor colombiano en cada arepa, perro y mas, <br>
+                no solo se disfruta, se comparte. Somos un <br>
+                emprendimiento dedicado a llevar el auténtico <br>
+                sabor colombiano en cada arepa, perro y más, <br>
                 con ingredientes frescos, de la mejor calidad <br>
                 y mucho amor.
             </p>
@@ -41,10 +41,10 @@ include("../HEADER/header.php")
 
             <div class="target">
                 <i data-lucide="chef-hat"></i>
-                <p><b>Sabor autentico</b></p> <br>
+                <p><b>Sabor auténtico</b></p> <br>
                 <p>
                     Recetas tradicionales <br> 
-                    con el toque unico de <br>
+                    con el toque único de <br>
                     ArepaMania
                 </p>
             </div>
@@ -53,7 +53,7 @@ include("../HEADER/header.php")
                 <i data-lucide="leaf"></i>
                 <p><b>Ingredientes</b></p> <br>
                 <p>
-                    Selecionamos lo mejor <br> 
+                    Seleccionamos lo mejor <br> 
                     para que cada bocado <br>
                     sea especial
                 </p>
@@ -61,17 +61,17 @@ include("../HEADER/header.php")
 
             <div class="target">
                 <i data-lucide="heart"></i>
-                <p><b>Pasion</b></p> <br>
+                <p><b>Pasión</b></p> <br>
                 <p>
                     Cada arepa y perro es <br> 
-                    preparado con dedicacion <br>
+                    preparado con dedicación <br>
                     y mucho amor
                 </p>
             </div>
 
             <div class="target">  
                 <i data-lucide="users"></i>
-                <p><b>Tu satisfacion</b></p> <br> 
+                <p><b>Tu satisfacción</b></p> <br> 
                 <p>
                     Nos importa que disfrutes <br> 
                     cada experiencia con <br>
@@ -87,15 +87,16 @@ include("../HEADER/header.php")
     <!-- DEFINICION BOTTOM -->
         <div class="container-bottom-definicion-items">
             <div>   
-                <h3>Mas que comida <br> es una tradicion</h3> <br>  
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis pariatur quidem enim. Adipisci ipsum voluptate autem, alias ea reiciendis accusamus, eveniet pariatur  animi est unde repellendus sequi consequuntur doloribus?</p>
+                 <img src="images/loguito.png" alt="mas que comida es una tradiccion">  
+                <p>Cada gran proyecto empieza con un primer paso, y nosotros estamos  felices de dar los nuestros acompañados por ustedes. Gracias por  apoyar este emprendimiento en desarrollo, por cada bocado compartido  y por ser parte de nuestra familia. <br>
+                ¡Seguimos trabajando con el corazón para ofrecerles siempre lo mejor!</p>
             </div>
         </div>
     <!-- DEFINICION BOTTOM -->
 
     <!-- IMG -->
         <div class="container-img">
-            <img src="images/backgroundmin.jpg" alt="imagen-comida" id="imagen-bottom-definicion">
+            <img src="images/banner.png" alt="imagen-comida" id="imagen-bottom-definicion">
         </div>
     <!-- IMG -->
     </div>
@@ -104,7 +105,7 @@ include("../HEADER/header.php")
 
 <!--FOOTER-->
     <?php 
-        include("../FOOTER/footer.php");
+        include("../INCLUDES../FOOTER/footer.php");
     ?>
 <!--FOOTER-->
 

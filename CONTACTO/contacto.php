@@ -1,5 +1,5 @@
 <?php 
-include("../HEADER/header.php");
+include("../INCLUDES../HEADER/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ include("../HEADER/header.php");
                 <i data-lucide="map-pin"></i>
                 <div>
                     <p><b>Direccion</b></p>
-                    <p>cra 6b#73c-38</p>
+                    <p>Cra. 10b #50-19</p>
                 </div>
             </div> <br>
 
@@ -32,7 +32,7 @@ include("../HEADER/header.php");
                 <i data-lucide="phone"></i>
                 <div>
                     <p><b>Telefono</b></p>
-                    <p>+57 300 670 8304</p>
+                    <p>+57 300 874 2286</p>
                 </div>
             </div> <br>
 
@@ -87,7 +87,7 @@ include("../HEADER/header.php");
 </div>
 
 <?php 
-include("../FOOTER/footer.php")
+include("../INCLUDES../FOOTER/footer.php")
 ?>
 
 <!-- FOOTER -->

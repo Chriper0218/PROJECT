@@ -1,21 +1,17 @@
 * { 
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box; 
-} 
+    box-sizing: border-box; } 
 
 html, 
 body { 
-    width: 100%;
-}
+    width: 100%;}
 
 body { 
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
+    font-size: 16px;}
 
 /* PRINCIPAL NOSOTROS */
-
 .container-nosotros { 
     display: flex; 
     align-items: center; 
@@ -27,93 +23,84 @@ body {
             rgba(17, 17, 17, 0.366),
             rgba(59, 59, 59, 0.11)
         ),
-        url("images/backgroundmain.jpg"); 
+        url("images/background.png"); 
 
     background-repeat: no-repeat; 
     background-size: auto 100%; 
     background-position: center right;
-    background-color: black;
-}
+    background-color: black;}
 
 #p-nosotros { 
     color: rgb(201, 201, 201); 
-    font-size: 26px;
-}
+    font-size: 26px;}
 
 h1, h2 { 
-    color: rgb(221, 170, 1);
-}
+    color: rgb(221, 170, 1);}
 
 .container-items-nosotros { 
     padding-left: 5%; 
-    font-size: 200%;
-}
+    font-size: 200%;}
 
 /* DEFINICION NOSOTROS */
 
 .container-dad { 
     width: 100%; 
-    height: 100vh;
-}
+    height: 100vh;}
 
 .container-definicion {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
-}
+    height: 30vh;}
 
 .container-definicion p {
-    font-size: 20px;
-}
+    font-size: 20px;}
 
 .container-target {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
-}
+    gap: 10%;}
 
 .target {
-    text-align: center;
-}
+    text-align: center;}
 
 
 /* DEFINICION BOTTOM NOSOTROS */
 .container-bottom-definicion {
     display: flex;
-    height: 70vh;
-}
+    height: 70vh;}
 
 .container-bottom-definicion p {
     color: white;
-    text-align: center;
-}
+    text-align: center;}
 
 .container-bottom-definicion h3 {
-    color: rgb(221, 170, 1);
-}
+    color: rgb(221, 170, 1);}
 
 .container-bottom-definicion-items {
+    word-wrap: wrap;
+    text-align: center;
+    font-size: 18px;
     padding: 10px;
     width: 40%;
     background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items: center;}
 
 .container-img {
     background-color: gray;
-    width: 60%;
-}
+    width: 60%;}
 
 #imagen-bottom-definicion {
     width: 100%;
-    height: 100%;
-}
+    height: 100%;}
 
 h3 {
     text-align: center;
-    font-size: 30px;
-}
+    font-size: 30px;}
+
+.container-bottom-definicion-items img {
+    width: 300px;
+    height: auto;}

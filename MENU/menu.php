@@ -1,6 +1,6 @@
 <?php 
-include("../CONEXION/database.php");
-include("../HEADER/header.php");
+include("../INCLUDES../CONEXION/database.php");
+include("../INCLUDES../HEADER/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,81 +19,45 @@ include("../HEADER/header.php");
         <h1>NUESTRO MENÚ</h1>
             <div class="container-target">
                 <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
+                    <img src="images/solo queso.png" alt="">
+                    <p class="name"><b>Solo queso</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
                 <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
+                    <img src="images/pollo y queso.png" alt="">
+                    <p class="name"><b>Pollo y queso</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
                 <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
+                    <img src="images/carne y queso.png" alt="">
+                    <p class="name"><b>Carne y queso</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
                 <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
+                    <img src="images/mixta.png" alt="">
+                    <p class="name"><b>Mixta</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
                 <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
+                    <img src="images/perro suizo.png" alt="">
+                    <p class="name"><b>Mixta</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
-
-                <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
-                    <p class="price"><b>6.000$</b></p>
-                    <form action=""><button class="button-target">Agregar</button></form>
-                </div>
-
-                <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
-                    <p class="price"><b>6.000$</b></p>
-                    <form action=""><button class="button-target">Agregar</button></form>
-                </div>
-
-                <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
-                    <p class="price"><b>6.000$</b></p>
-                    <form action=""><button class="button-target">Agregar</button></form>
-                </div>
-
-                <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
-                    <p class="price"><b>6.000$</b></p>
-                    <form action=""><button class="button-target">Agregar</button></form>
-                </div>
-
-                <div class="target">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKq_xNoXL1lld2ScLa7xET3fQG96FqVzHwErOptjg4VpSH6_IRe70W5AE&s=10" alt="">
-                    <p class="name"><b>Arepa sencilla</b></p>
-                    <p class="price"><b>6.000$</b></p>
-                    <form action=""><button class="button-target">Agregar</button></form>
-                </div>
-            </div>
     </div>
 <!-- MENU -->
 
 <!--FOOTER-->
 <?php
-include("../FOOTER/footer.php")
+include("../INCLUDES../FOOTER/footer.php")
 ?>
 <!--FOOTER-->
 </body>

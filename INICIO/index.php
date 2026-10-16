@@ -1,7 +1,6 @@
 <?php 
-include("../HEADER/header.php");
+include("../INCLUDES../HEADER/header.php");
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -36,7 +35,7 @@ include("../HEADER/header.php");
 
 <!--FOOTER-->
 <?php 
-include("../FOOTER/footer.php");
+include("../INCLUDES../FOOTER/footer.php");
 ?>
 <!--FOOTER-->
 
