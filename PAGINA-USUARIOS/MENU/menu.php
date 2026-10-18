@@ -1,6 +1,5 @@
 <?php 
-include("../INCLUDES../CONEXION/database.php");
-include("../INCLUDES../HEADER/header.php");
+include("../../INCLUDES../HEADER/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +56,7 @@ include("../INCLUDES../HEADER/header.php");
 
 <!--FOOTER-->
 <?php
-include("../INCLUDES../FOOTER/footer.php")
+include("../../INCLUDES../FOOTER/footer.php")
 ?>
 <!--FOOTER-->
 </body>

@@ -1,5 +1,5 @@
 <?php 
-include("../INCLUDES../CONEXION/database.php");
+include("../../INCLUDES../CONEXION/database.php");
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ include("../INCLUDES../CONEXION/database.php");
                 <h1>CREAR CUENTA</h1>
             <form action="" method="POST">
                 <input type="text" minlength="10" maxlenght="255" placeholder="Ingresa tu nombre completo" required name="NOMBRE"> <br>
-                <input type="email" maxlength="255" placeholder="Ingresa tu correo electronico" required name="EMAIL" > <br>
+                <input type="email" maxlength="255" placeholder="Ingresa tu correo electronico" required name="MAIL" > <br>
                 <input type="text" maxlength="16" placeholder="Ingresa tu número telefónico" required name="NUMERO"> <br>
                 <input type="password" maxlength="255" placeholder="Ingresa una contraseña" required name="CONTRASEÑA"> <br>
                 <button type="submit" class="submit" name="ENVIAR"><b>ENVIAR</b></button>
@@ -33,6 +33,26 @@ include("../INCLUDES../CONEXION/database.php");
 
 <?php 
     // GUARDAR DATOS EN LA BASE DE DATOS // 
+    
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $NAME = $_POST['NOMBRE'];
+        $MAIL = $_POST['MAIL'];
+        $NUMBER = $_POST['NUMERO'];
+        $PASSWORD = $_POST['CONTRASEÑA'];
+
+        $HASHED_PASSWORD = password_hash($PASSWORD, PASSWORD_DEFAULT);
+
+        $SQL = "INSERT INTO users 
+            (NAME_USER, EMAIL_USER, NUMBER_USER, PASSWORD_USER)
+            VALUES ('$NAME', '$MAIL', '$NUMBER', '$HASHED_PASSWORD')";
+
+        if(mysqli_query($CONEXION, $SQL)) {
+            echo "<script>alert('Usuario registrado correctamente')</script>";
+        }
+        else {
+            echo "<script>alert('Usuario registrado incorrectamente')</script>";
+        }}
+
     // GUARDAR DATOS EN LA BASE DE DATOS //
 ?>
 

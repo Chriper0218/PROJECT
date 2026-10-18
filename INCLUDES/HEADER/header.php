@@ -1,5 +1,5 @@
 <?php
-include("../INCLUDES../CONEXION/database.php");
+include("../../INCLUDES../CONEXION/database.php");
 session_start();
 
 $pagina_actual = basename($_SERVER['PHP_SELF']);
@@ -56,6 +56,15 @@ header {
     padding: 10px;
     font-size: 20px;
     transition: color 0.3s ease;}
+
+.nav-links a:hover {
+    color:rgb(221, 170, 1);
+}
+
+.nav-links a[aria-current="page"] {
+    color:rgb(221, 170, 1);
+    font-weight:bold;
+}
 
 .menu-btn {
     display: none;
@@ -249,30 +258,30 @@ header {
 <!-- HEADER -->
     <header>
         <nav class="main-nav" aria-label="Navegación principal">
-            <a href="../INICIO/index.php"><img src="images/logo.png"alt="Logo de ArepaMania"id="logoheader"></a>
+            <a href="../INICIO/index.php"><img src="../../MEDIA/logo.png"alt="Logo de ArepaMania" id="logoheader"></a>
 
             <ul class="nav-links" id="navlinks">
 
-                <li><a href="../INICIO/index.php" <?php if ($pagina_actual == 'index.php') echo 'aria-current="page"'; ?>>
+                <li><a href="../../PAGINA-USUARIOS/INICIO/index.php" <?php if ($pagina_actual == 'index.php') echo 'aria-current="page"'; ?>>
                 Inicio</a></li>
 
-                <li><a href="../MENU/menu.php"<?php if ($pagina_actual == 'menu.php') echo 'aria-current="page"'; ?>>
+                <li><a href="../../PAGINA-USUARIOS/MENU/menu.php"<?php if ($pagina_actual == 'menu.php') echo 'aria-current="page"'; ?>>
                 Menú</a></li>
 
-                <li><a href="../PEDIDOS/pedidos.php"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
+                <li><a href="../../PAGINA-USUARIOS/PEDIDOS/pedidos.php"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
                 Pedidos</a></li>
 
-                <li><a href="../NOSOTROS/nosotros.php"<?php if ($pagina_actual == 'nosotros.php') echo 'aria-current="page"'; ?>>
+                <li><a href="../../PAGINA-USUARIOS/NOSOTROS/nosotros.php"<?php if ($pagina_actual == 'nosotros.php') echo 'aria-current="page"'; ?>>
                 Nosotros</a></li>
 
-                <li><a href="../CONTACTO/contacto.php"<?php if ($pagina_actual == 'contacto.php') echo 'aria-current="page"'; ?>>
+                <li><a href="../../PAGINA-USUARIOS/CONTACTO/contacto.php"<?php if ($pagina_actual == 'contacto.php') echo 'aria-current="page"'; ?>>
                 Contacto</a></li>
             </ul>
 
             <div class="right-header">
                 <div class="header-icons">
-                    <a href="../PEDIDOS/pedidos.php" aria-label="Carrito de compras"><img src="images/shopping-cart.png" alt="Carrito de compras"></a>
-                    <a href="#" id="btn-usuario" aria-label="Mi usuario"><img src="images/user.png" alt="Usuario"></a>
+                    <a href="../PEDIDOS/pedidos.php" aria-label="Carrito de compras"><img src="../../MEDIA/shopping-cart.png" alt="Carrito de compras"></a>
+                    <a href="#" id="btn-usuario" aria-label="Mi usuario"><img src="../../MEDIA/user.png" alt="Usuario"></a>
                     <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navlinks"> ☰</button>
                 </div>
 
