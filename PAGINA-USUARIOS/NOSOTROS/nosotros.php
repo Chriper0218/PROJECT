@@ -87,7 +87,7 @@ include("../../INCLUDES../HEADER/header.php")
     <!-- DEFINICION BOTTOM -->
         <div class="container-bottom-definicion-items">
             <div>   
-                 <img src="images/loguito.png" alt="mas que comida es una tradiccion">  
+                 <img src="../../MEDIA/NOSOTROS/loguito.png" alt="mas que comida es una tradiccion">  
                 <p>Cada gran proyecto empieza con un primer paso, y nosotros estamos  felices de dar los nuestros acompañados por ustedes. Gracias por  apoyar este emprendimiento en desarrollo, por cada bocado compartido  y por ser parte de nuestra familia. <br>
                 ¡Seguimos trabajando con el corazón para ofrecerles siempre lo mejor!</p>
             </div>
@@ -96,7 +96,7 @@ include("../../INCLUDES../HEADER/header.php")
 
     <!-- IMG -->
         <div class="container-img">
-            <img src="images/banner.png" alt="imagen-comida" id="imagen-bottom-definicion">
+            <img src="../../MEDIA/NOSOTROS/banner.png" alt="imagen-comida" id="imagen-bottom-definicion">
         </div>
     <!-- IMG -->
     </div>

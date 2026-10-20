@@ -28,7 +28,7 @@ body {
             rgba(17, 17, 17, 0.366),
             rgba(59, 59, 59, 0.11)
         ),
-        url("images/backgroundmain.png");
+        url("../../MEDIA/INICIO/background2-INICIO.png");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center right;

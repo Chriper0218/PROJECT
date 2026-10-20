@@ -1,5 +1,4 @@
 <?php
-include("../INCLUDES../CONEXION/database.php");
 session_start();
 $pagina_actual = basename($_SERVER['PHP_SELF']);
 ?>
@@ -260,31 +259,31 @@ header {
 <!-- HEADER -->
     <header>
         <nav class="main-nav" aria-label="Navegación principal">
-            <a href="../INICIO/index.php"><img src="HEADER_IMAGENES/logo.png"alt="Logo de ArepaMania"id="logoheader"></a>
+            <a href="../INICIO/index.php"><img src="../HEADER_IMAGENES/logo.png"alt="Logo de ArepaMania"id="logoheader"></a>
 
             <ul class="nav-links" id="navlinks">
 
-                <li><a href="#" <?php if ($pagina_actual == 'index.php') echo 'aria-current="page"'; ?>>
-                Productos</a></li>
-
-                <li><a href="#"<?php if ($pagina_actual == 'menu.php') echo 'aria-current="page"'; ?>>
+                <li><a href="../INVENTARIO/inventario.php"<?php if ($pagina_actual == 'inventario.php') echo 'aria-current="page"'; ?>>
                 Inventario</a></li>
 
-                <li><a href="#"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
-                Usuarios</a></li>
+                <li><a href="../PEDIDOS/pedidos.php"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
+                pedidos</a></li>
 
-                <li><a href="#"<?php if ($pagina_actual == 'nosotros.php') echo 'aria-current="page"'; ?>>
-                Pedidos</a></li>
+                <li><a href="../PRODUCTOS/productos.php"<?php if ($pagina_actual == 'productos.php') echo 'aria-current="page"'; ?>>
+                productos</a></li>
 
-                <li><a href="#"<?php if ($pagina_actual == 'contacto.php') echo 'aria-current="page"'; ?>>
-                Tareas</a></li>
+                <li><a href="../TAREAS/tareas.php"<?php if ($pagina_actual == 'tareas.php') echo 'aria-current="page"'; ?>>
+                tareas</a></li>
+
+                <li><a href="../USUARIOS/usuarios.php"<?php if ($pagina_actual == 'usuarios.php') echo 'aria-current="page"'; ?>>
+                usuarios</a></li>
             </ul>
 
             <div class="right-header">
                 <div class="header-icons">
                     <p id="p-admin">Admistrador</p>
                     <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navlinks"> ☰</button>
-                    <a href="#" id="btn-usuario" aria-label="Mi usuario"><img src="HEADER_IMAGENES/user.png" alt="Usuario"></a>
+                    <a href="#" id="btn-usuario" aria-label="Mi usuario"><img src="../HEADER_IMAGENES/user.png" alt="Usuario"></a>
                 </div>
             </div>
 

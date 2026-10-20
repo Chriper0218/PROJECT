@@ -355,6 +355,16 @@ header {
                 });
             });
 
+            /* Cerrar menú con Escape */
+            document.addEventListener("keydown", function (evento) {
+                if (evento.key === "Escape") {
+                    enlacesMenu.classList.remove("active");
+                    botonMenu.textContent = "☰";
+                    botonMenu.setAttribute("aria-expanded", "false");
+                    modal.classList.remove("modal--show");
+                }
+            });
+
             /* Modal de usuario */
             const modal = document.getElementById("modal-usuario");
             const botonUsuario = document.getElementById("btn-usuario");
@@ -371,16 +381,6 @@ header {
 
             modal.addEventListener("click", function (evento) {
                 if (evento.target === modal) {
-                    modal.classList.remove("modal--show");
-                }
-            });
-
-            /* Cerrar menú con Escape */
-            document.addEventListener("keydown", function (evento) {
-                if (evento.key === "Escape") {
-                    enlacesMenu.classList.remove("active");
-                    botonMenu.textContent = "☰";
-                    botonMenu.setAttribute("aria-expanded", "false");
                     modal.classList.remove("modal--show");
                 }
             });

@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['ROL'] = $USER['ROL'];
 
         if($USER['ROL'] == 'administrador') {
-            header("Location: ../ADMINISTRACION/administracion.php");} 
+            header("Location: ../../ADMINISTRACION/INVENTARIO/inventario.php");} 
 
         else {
             header("Location: ../INICIO/index.php");}

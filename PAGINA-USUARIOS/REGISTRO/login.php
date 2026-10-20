@@ -48,6 +48,7 @@ include("../../INCLUDES../CONEXION/database.php");
 
         if(mysqli_query($CONEXION, $SQL)) {
             echo "<script>alert('Usuario registrado correctamente')</script>";
+            header("location:../INICIO/index.php");
         }
         else {
             echo "<script>alert('Usuario registrado incorrectamente')</script>";

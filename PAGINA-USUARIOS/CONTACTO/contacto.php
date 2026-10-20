@@ -55,9 +55,9 @@ include("../../INCLUDES../HEADER/header.php");
 
             <div class="target-informacion-siguenos">
                 <h3>siguenos</h3> <br>
-                <a href=""><img src="../MEDIA/CONTACTO/facebook.png" alt="facebook"></a>
-                <a href=""><img src="images/instagram.png" alt="instagram"></a>
-                <a href=""><img src="images/whatsapp.png" alt="whatsapp"></a>
+                <a href=""><img src="../../MEDIA/CONTACTO/facebook.png" alt="facebook"></a>
+                <a href=""><img src="../../MEDIA/CONTACTO/instagram.png" alt="instagram"></a>
+                <a href=""><img src="../../MEDIA/CONTACTO/whatsapp.png" alt="whatsapp"></a>
                 <p>@ArepaMania</p>
             </div>
         </div>
