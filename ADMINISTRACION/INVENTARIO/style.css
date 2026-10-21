@@ -4,64 +4,6 @@
     box-sizing: border-box;
 }
 
-/* MODAL */
-.modal {
-    position: fixed;
-    inset: 0;
-    z-index: 2000;
-    background-color: rgba(0, 0, 0, 0.53);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transition: opacity 0.3s ease,
-                visibility 0.3s ease;}
-
-.container-ventana {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    width: 90%;
-    max-width: 500px;
-    max-height: 90vh;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;}
-
-.modal--show {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;}
-
-.container-ventana-informacion {
-    background-color: rgba(56, 56, 56, 0.16);
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    width: 100%;}
-
-.modal__close {
-    display: inline-block;
-    color: black;
-    background-color: rgba(196, 10, 10, 0.62);
-    min-width: 150px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid rgb(153, 35, 19);
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;}
-/* MODAL */
-
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -119,4 +61,15 @@ th {
 th, td {
     padding: 10px;
     border:none;
+}
+
+.container-form {
+    margin-left: 2%;
+}
+
+form {
+    background-color: rgba(128, 128, 128, 0.795);
+    width: 40%;
+    text-align: center;
+    padding: 10px;
 }

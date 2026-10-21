@@ -370,6 +370,12 @@ header {
             const botonUsuario = document.getElementById("btn-usuario");
             const cerrarModal = document.getElementById("cerrar-modal");
 
+            modal.addEventListener("click", function (evento) {
+            if (evento.target === modal) {
+            cerrarModal();
+            }
+            });
+
             botonUsuario.addEventListener("click", function (evento) {
                 evento.preventDefault();
                 modal.classList.add("modal--show");
