@@ -13,76 +13,80 @@ include("../HEADER_ADMIN/header_admin.php");
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <div class="container">
-        <div class="container-top">
-            <h2>INVENTARIO</h2> 
-            <button class="button-agregar"><b>Agregar</b></button>
-        </div>
-        <br>
-        <div class="container-table">
-            <table border="1">
 
-                <?php 
-                //  MOSTRAR DATOS DE PRODUCTOS DE LA BASE DE DATOS //
-                    $SQL_READ = "SELECT * FROM products";
-                    $RESULTADO = mysqli_query($CONEXION,$SQL_READ);
 
-                    if(!$RESULTADO) {
-                        die("Error".mysqli_error());
-                    }
-                    else {
-                        while ($ROW = mysqli_fetch_assoc($RESULTADO)) {
-                        
-                        }
-                    }
-
-                //  MOSTRAR DATOS DE PRODUCTOS DE LA BASE DE DATOS // 
-                ?>
-
-                <tr>
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Detalles</th>
-                    <th>Categoria</th>
-                    <th>Cantidad</th>
-                    <th>Unidad</th>
-                    <th>Stock minimo</th>
-                    <th>Precio compra</th>
-                    <th>Fecha ingreso</th>
-                    <th>Fecha vencimiento</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-
-                <tr>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>hello</td>
-                    <td>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
+<div class="container">
+    <div class="container-top">
+        <h2>INVENTARIO</h2>
+        <button class="button"><b>Agregar</b></button>
     </div>
+    <br>
+
+    <div class="container-table">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Detalles</th>
+                <th>Categoria</th>
+                <th>Cantidad</th>
+                <th>Unidad</th>
+                <th>Stock minimo</th>
+                <th>Precio compra</th>
+                <th>Fecha ingreso</th>
+                <th>Fecha vencimiento</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+
+            <?php
+            // MOSTRAR DATOS DE PRODUCTOS DE LA BASE DE DATOS
+            $SQL_READ = "SELECT * FROM products";
+            $RESULTADO = mysqli_query($CONEXION, $SQL_READ);
+
+            if (!$RESULTADO) {
+                die("Error: " . mysqli_error($CONEXION));
+            } else {
+                while ($ROW = mysqli_fetch_assoc($RESULTADO)) {
+            ?>
+
+                    <tr>
+                        <td><?php echo $ROW['ID_PRODUCTO']; ?></td>
+                        <td><?php echo $ROW['NOMBRE']; ?></td>
+                        <td><?php echo $ROW['DETALLES']; ?></td>
+                        <td><?php echo $ROW['CATEGORIA']; ?></td>
+                        <td><?php echo $ROW['CANTIDAD']; ?></td>
+                        <td><?php echo $ROW['UNIDAD_MEDIDA']; ?></td>
+                        <td><?php echo $ROW['STOCK_MINIMO']; ?></td>
+                        <td><?php echo $ROW['COSTO_COMPRA']; ?></td>
+                        <td><?php echo $ROW['FECHA_INGRESO']; ?></td>
+                        <td><?php echo $ROW['FECHA_VENCIMIENTO']; ?></td>
+                        <td><?php echo $ROW['ESTADO']; ?></td>
+                        <td>
+                            <button type="button" class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
+                            <button type="button" class="button-eliminar"><img src="../HEADER_IMAGENES/trash.png" alt="eliminar"></button>
+                        </td>
+                        <hr>
+                    </tr>
+            <?php
+                }
+            }
+            // MOSTRAR DATOS DE PRODUCTOS DE LA BASE DE DATOS
+            ?>
+        </table>
+    </div>
+</div>
+
 
 <!-- FORM -->
     <div class="container-form">
             <form action="" method="POST">
-                <input type="text" required name="producto" placeholder="Producto"> <br>
+                <input type="text" required name="producto" placeholder="Producto"> <br> 
                 <input type="text" name="detalle" placeholder="Detalles"> <br>
                 
                 <div>
-                    <label for="categoria">Selecciona la categoria:</label> <br>
+                    <br>
+                    <label for="categoria">Selecciona la categoria:</label> 
                     <select name="categoria" id="categoria" required>
                         <option value="">Selecciona una categoria</option>
                         <option value="carnes y proteinas">carnes y proteinas</option>
@@ -101,19 +105,21 @@ include("../HEADER_ADMIN/header_admin.php");
                 <input type="number" name="cantidad" required placeholder="Cantidad del producto" step="1"> <br>
                 <input type="text" name="unidad" required placeholder="Unidad de medida"> <br>
                 <input type="number" name="stock" required placeholder="stock minimo" step="1"> <br>
-                <input type="number" min="0" step="0.01" name="precio" placeholder="Precio de compra" required> <br>
+                <input type="text" name="precio" placeholder="Precio de compra" required> <br>
+                 
+
+                <div class="container-fecha">
+                    <label for="fecha_ingreso">Fecha de ingreso del producto:</label>
+                    <input type="date" required name="fecha_ingreso" class="input_fecha">
+                </div>
+
+                <div class="container-fecha">
+                    <label for="fecha_vencimiento">Fecha de vencimiento del producto:</label>
+                    <input type="date" required name="fecha_vencimiento" class="input_fecha">
+                </div>
+                <br>
                 
-                <div>
-                    <label for="fecha_ingreso">Fecha de ingreso del producto:</label> <br>
-                    <input type="date" required name="fecha_ingreso"> <br>
-                </div>
-
-                <div>
-                    <label for="fecha_vencimiento">Fecha de vencimiento del producto:</label> <br>
-                    <input type="date" required name="fecha_vencimiento"> <br>
-                </div>
-
-                <div>
+                <div style="display:flex;">
                     <label for="estado">Estado del producto:</label> <br>
                     <select name="estado" id="estado" required>
                         <option value="activo">activo</option>
@@ -121,8 +127,8 @@ include("../HEADER_ADMIN/header_admin.php");
                         <option value="agotado">agotado</option>
                     </select>
                 </div>
-
-                <button type="submit" class="button-submit" name="enviar">Enviar</button>
+                <br>
+                <button type="submit" class="button" name="enviar">Enviar</button>
             </form>
         </div>
 <!-- FORM -->
