@@ -266,17 +266,17 @@ header {
                 <li><a href="../INVENTARIO/inventario.php"<?php if ($pagina_actual == 'inventario.php') echo 'aria-current="page"'; ?>>
                 Inventario</a></li>
 
-                <li><a href="../PEDIDOS/pedidos.php"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
-                pedidos</a></li>
-
                 <li><a href="../PRODUCTOS/productos.php"<?php if ($pagina_actual == 'productos.php') echo 'aria-current="page"'; ?>>
-                productos</a></li>
+                Productos</a></li>
 
                 <li><a href="../TAREAS/tareas.php"<?php if ($pagina_actual == 'tareas.php') echo 'aria-current="page"'; ?>>
-                tareas</a></li>
+                Tareas</a></li>
 
                 <li><a href="../USUARIOS/usuarios.php"<?php if ($pagina_actual == 'usuarios.php') echo 'aria-current="page"'; ?>>
-                usuarios</a></li>
+                Usuarios</a></li>
+
+                <li><a href="../PEDIDOS/pedidos.php"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
+                Pedidos</a></li>
             </ul>
 
             <div class="right-header">

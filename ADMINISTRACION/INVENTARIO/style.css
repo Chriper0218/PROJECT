@@ -65,15 +65,15 @@ th, td {
     border:none;
 }
 
-.container-form {
-    margin-left: 2%;
+.container-form  {
+    width: 27%;
 }
 
 form {
-    background-color: rgba(168, 168, 168, 0.199);
-    width: 30%;
+    background-color: rgb(168, 168, 168);
+    width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid rgba(128, 128, 128, 0.699);
     border-radius: 10px;
 }
@@ -125,3 +125,63 @@ input{
 table td img {
     width: 18px;
 }
+
+/* MODAL */
+.modal  {
+    width: 100%;}
+
+/* MOSTRAR MODAL */
+.modal.modal--show {
+    display: flex;
+}
+
+.cerrar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-cancelar{
+    padding: 11px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-cancelar {
+    width: 120px;
+    background-color: #ddd;
+    color: #222;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .modal-contenido {
+        max-width: 100%;
+    }
+
+    .modal-header h2 {
+        font-size: 18px;
+    }
+
+    .modal-botones button {
+        flex: 1;
+    }
+}
+/* MODAL */

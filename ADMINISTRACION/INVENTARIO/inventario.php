@@ -3,6 +3,30 @@ include("../../INCLUDES/CONEXION/database.php");
 include("../HEADER_ADMIN/header_admin.php");
 ?> 
 
+<?php
+// ELIMINAR PRODUCTOS //
+if (isset($_POST['eliminar'])) {
+
+    $ID_PRODUCTO = (int) $_POST['id_producto'];
+
+    $SQL = "DELETE FROM products WHERE ID_PRODUCTO = ?";
+    $STMT = mysqli_prepare($CONEXION, $SQL);
+
+    mysqli_stmt_bind_param($STMT, "i", $ID_PRODUCTO);
+
+    if (mysqli_stmt_execute($STMT)) {
+        mysqli_stmt_close($STMT);
+
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        echo "Error al eliminar el producto: " . mysqli_stmt_error($STMT);
+        mysqli_stmt_close($STMT);
+    }
+}
+// ELIMINAR PRODUCTOS //
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,11 +38,10 @@ include("../HEADER_ADMIN/header_admin.php");
 </head>
 <body> 
 
-
 <div class="container">
     <div class="container-top">
         <h2>INVENTARIO</h2>
-        <button class="button"><b>Agregar</b></button>
+        <button type="button" id="abrir-modal" class="button"><b>Agregar</b></button>
     </div>
     <br>
 
@@ -64,7 +87,13 @@ include("../HEADER_ADMIN/header_admin.php");
                         <td><?php echo $ROW['ESTADO']; ?></td>
                         <td>
                             <button type="button" class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
-                            <button type="button" class="button-eliminar"><img src="../HEADER_IMAGENES/trash.png" alt="eliminar"></button>
+                            <form method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este producto?');">
+                                <input type="hidden" name="id_producto" value="<?php echo $ROW['ID_PRODUCTO']; ?>">
+                                <button type="submit" class="button-eliminar" name="eliminar">              
+                                    <img src="../HEADER_IMAGENES/trash.png" alt="Eliminar">
+                                </button>
+
+                            </form>
                         </td>
                         <hr>
                     </tr>
@@ -78,9 +107,13 @@ include("../HEADER_ADMIN/header_admin.php");
 </div>
 
 
-<!-- FORM -->
+<!-- VENTANA MODAL -->
+<div class="modal" id="modal">
+    
+    <!-- FORM -->
     <div class="container-form">
             <form action="" method="POST">
+                <h2>Ingresa los datos de los productos</h2>
                 <input type="text" required name="producto" placeholder="Producto"> <br> 
                 <input type="text" name="detalle" placeholder="Detalles"> <br>
                 
@@ -128,11 +161,60 @@ include("../HEADER_ADMIN/header_admin.php");
                     </select>
                 </div>
                 <br>
-                <button type="submit" class="button" name="enviar">Enviar</button>
+                <button type="submit" class=" btn-cancelar" name="enviar">Enviar</button>
+                <button type="button" id="cancelar" class="btn-cancelar">salir</button>
             </form>
         </div>
 <!-- FORM -->
+</div>
 
+<script>
+    const modal = document.getElementById("modal");
+const abrirModal = document.getElementById("abrir-modal");
+const cerrarModal = document.getElementById("cerrar-modal");
+const cancelar = document.getElementById("cancelar");
+const formulario = document.getElementById("formulario");
+
+// ABRIR MODAL
+abrirModal.addEventListener("click", function () {
+    modal.classList.add("modal--show");
+});
+
+// CERRAR MODAL CON LA X
+cerrarModal.addEventListener("click", function () {
+    modal.classList.remove("modal--show");
+});
+
+// CERRAR CON CANCELAR
+cancelar.addEventListener("click", function () {
+    modal.classList.remove("modal--show");
+});
+
+// CERRAR AL HACER CLIC FUERA
+modal.addEventListener("click", function (evento) {
+    if (evento.target === modal) {
+        modal.classList.remove("modal--show");
+    }
+});
+
+// CERRAR CON ESC
+document.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape") {
+        modal.classList.remove("modal--show");
+    }
+});
+
+// EJEMPLO DE ENVÍO DEL FORMULARIO
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    alert("Formulario enviado correctamente.");
+
+    formulario.reset();
+    modal.classList.remove("modal--show");
+});
+</script>
+<!-- VENTANA MODAL -->
 </body>
 </html>
 
@@ -164,3 +246,26 @@ include("../HEADER_ADMIN/header_admin.php");
     }
 //  AGREGAR PRODUCTOS EN LA BASE DE DATOS   //
 ?>
+
+<?php 
+//  ELIMINAR REGISTROS O ELEMENTOS DEL INVENTARIO   //
+    if(isset($_POST['eliminar'])) {
+        $ID_PRODUCTO = (int) $_POST['ID_PRODUCTO'];
+
+        $SQL_DELETE = "DELETE * FROM products WHERE ID_PRODUCTO = '$ID_PRODUCTO'";
+        $STMT = mysqli_prepare($CONEXION, $SQL);
+
+        mysqli_stmt_bind_param($STMT, "i", $ID_PRODUCTO);
+
+        if (mysqli_stmt_execute($STMT)) {
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+        } else {
+        echo "Error al eliminar el producto.";
+        }
+
+        mysqli_stmt_close($STMT);
+        }
+//  ELIMINAR REGISTROS O ELEMENTOS DEL INVENTARIO   //
+?>
+

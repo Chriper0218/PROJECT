@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    margin: 3%;
+}
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(99, 99, 99, 0.123);
+    border-radius: 10px;
+    border: 1px solid rgba(99, 99, 99, 0.404);
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    box-shadow: gray 2px 2px 5px 1px;
+}
+
+.button{
+    background-color: rgb(221, 170, 1);
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 150px;
+    min-height: 35px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                background-color 0.2s ease;}
+
+.button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    outline: 1px solid rgb(255, 255, 255);
+    transform: scale(1.03);}
+
+table {
+    border-collapse:collapse ;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgb(128, 128, 128) 2px 2px 5px 1px;
+    overflow-x: auto;
+    border: none;
+    border-radius: 10px;
+}
+
+
+th {
+    background-color: rgba(0, 0, 0, 0.904);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+th, td {
+    padding: 10px;
+    border:none;
+}
+
+.container-form  {
+    width: 27%;
+}
+
+form {
+    background-color: rgb(168, 168, 168);
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.699);
+    border-radius: 10px;
+}
+
+.container-fecha {
+    display: block;
+}
+
+.input_fecha {
+    width: 25%;
+}
+
+input{
+    width: 90%;
+    font-size: 15px;
+    padding: 1%;
+    margin-top: 4%;
+    border-radius: 4px;
+    border: 2px solid rgb(0, 0, 0);}
+
+#input-tarea{
+    width: 90%;
+    height: 100px;
+    font-size: 15px;
+    padding: 1%;
+    margin-top: 4%;
+    border-radius: 4px;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;}
+
+.button-editar{
+    background-color:  rgba(0, 0, 0, 0.938);
+    width: 45%;
+    border-radius: 5px;
+    padding: 8px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;}
+
+.button-editar:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);}
+
+.button-eliminar{
+    background-color:  rgba(0, 0, 0, 0.938);
+    width: 45%;
+    border-radius: 5px;
+    padding: 8px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;}
+
+.button-eliminar:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);}
+
+table td img {
+    width: 18px;
+}
+
+
+/* MODAL */
+.modal  {
+    width: 100%;}
+
+/* MOSTRAR MODAL */
+.modal.modal--show {
+    display: flex;
+}
+
+.cerrar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn-cancelar{
+    padding: 11px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-cancelar {
+    width: 120px;
+    background-color: #ddd;
+    color: #222;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .modal-contenido {
+        max-width: 100%;
+    }
+
+    .modal-header h2 {
+        font-size: 18px;
+    }
+
+    .modal-botones button {
+        flex: 1;
+    }
+}
+/* MODAL */

@@ -19,7 +19,7 @@ include("../../INCLUDES../CONEXION/database.php");
             <form action="" method="POST">
                 <input type="text" minlength="10" maxlenght="255" placeholder="Ingresa tu nombre completo" required name="NOMBRE"> <br>
                 <input type="email" maxlength="255" placeholder="Ingresa tu correo electronico" required name="MAIL" > <br>
-                <input type="text" maxlength="16" placeholder="Ingresa tu número telefónico" required name="NUMERO"> <br>
+                <input type="number" maxlength="16" placeholder="Ingresa tu número telefónico" required name="NUMERO"> <br>
                 <input type="password" maxlength="255" placeholder="Ingresa una contraseña" required name="CONTRASEÑA"> <br>
                 <button type="submit" class="submit" name="ENVIAR"><b>ENVIAR</b></button>
             </form>
