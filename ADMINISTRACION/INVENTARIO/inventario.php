@@ -16,8 +16,9 @@ if (isset($_POST['eliminar'])) {
 
     if (mysqli_stmt_execute($STMT)) {
         mysqli_stmt_close($STMT);
-
-        header("Location: " . $_SERVER['PHP_SELF']);
+         echo "<script>window.location.href = window.location.pathname;
+        alert('Producto eliminado exitosamente.'); 
+        </script>";
         exit;
     } else {
         echo "Error al eliminar el producto: " . mysqli_stmt_error($STMT);
@@ -86,16 +87,17 @@ if (isset($_POST['eliminar'])) {
                         <td><?php echo $ROW['FECHA_VENCIMIENTO']; ?></td>
                         <td><?php echo $ROW['ESTADO']; ?></td>
                         <td>
-                            <button type="button" class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
-                            <form method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este producto?');">
+                            <div class="container-acciones">
+                                <button type="button" class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
+                                <form method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este producto?');">
                                 <input type="hidden" name="id_producto" value="<?php echo $ROW['ID_PRODUCTO']; ?>">
                                 <button type="submit" class="button-eliminar" name="eliminar">              
                                     <img src="../HEADER_IMAGENES/trash.png" alt="Eliminar">
                                 </button>
+                            </div>
 
                             </form>
                         </td>
-                        <hr>
                     </tr>
             <?php
                 }
@@ -132,6 +134,7 @@ if (isset($_POST['eliminar'])) {
                         <option value="masas y productos preparados">masas y productos preparados</option>
                         <option value="empaques y desechables">empaques y desechables</option>
                         <option value="productos de aseo">productos de aseo</option>
+                        <option value="utensilios">utensilios</option>
                     </select> <br>
                 </div>
 
@@ -148,7 +151,7 @@ if (isset($_POST['eliminar'])) {
 
                 <div class="container-fecha">
                     <label for="fecha_vencimiento">Fecha de vencimiento del producto:</label>
-                    <input type="date" required name="fecha_vencimiento" class="input_fecha">
+                    <input type="date" name="fecha_vencimiento" class="input_fecha">
                 </div>
                 <br>
                 

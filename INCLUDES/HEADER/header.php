@@ -1,7 +1,6 @@
 <?php
 include("../../INCLUDES../CONEXION/database.php");
 session_start();
-
 $pagina_actual = basename($_SERVER['PHP_SELF']);
 ?>
 
@@ -210,33 +209,10 @@ header {
     transition: opacity 0.3s ease,
                 visibility 0.3s ease;}
 
-.container-ventana {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    width: 90%;
-    max-width: 500px;
-    max-height: 90vh;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;}
-
 .modal--show {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;}
-
-.container-ventana-informacion {
-    background-color: rgba(56, 56, 56, 0.16);
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    width: 100%;}
 
 .modal__close {
     display: inline-block;
@@ -251,6 +227,34 @@ header {
     cursor: pointer;
     text-decoration: none;}
 
+.container-all {
+    border: 1px solid yellow;
+    width: 50%;
+    border-radius:10px;
+}
+
+.container-top-header {
+    display: flex;
+    background-color: black;
+    color:white;
+    width: 100%;
+    justify-content:space-between;
+    padding:2%;
+    border-radius: 10px;
+}
+
+.container-top-header img {
+    width: 120px;
+}
+
+.informacion-header {
+    display:flex;
+    align-items:center;
+}
+
+.container-bottom {
+    background-color:white;
+}
 </style>
 </head>
 <body>
@@ -287,7 +291,6 @@ header {
 
                 <form action="../REGISTRO/singup.php"><button type="submit" id="button-header"><b>INICIAR SESIÓN</b></button></form>
             </div>
-
         </nav>
     </header>
     <!-- HEADER -->
@@ -295,37 +298,38 @@ header {
 
 <!-- VENTANA MODAL -->
     <section class="modal" id="modal-usuario">
-        <div class="container-ventana">
-            <h2>Hola, Juan</h2>
-            <p>Aquí puedes ver y gestionar tu información.</p>
-
-            <div class="container-ventana-informacion">
-                <div style="display:flex; gap:5px; align-items:center;">
-                    <i data-lucide="user"></i>
-                    <h3>Información personal</h3>
+        <div class="container-all">
+            <div class="container-top-header">
+                <div class="informacion-header">
+                    <img src="../../MEDIA/user.png" alt="imagen-usuario">
+                    <div class="nombe">
+                        <h2>Administrador</h2>
+                        <p>Administrador</p>
+                    </div>
                 </div>
 
-                <br>
-
-                <p>Nombre completo: Juan Perez</p>
-                <br>
-                <p>Correo electrónico: juanperez262215@gmail.com</p>
-                <br>
-                <p>Teléfono: 3006708304</p>
+                <img src="../../MEDIA/NOSOTROS/loguito.png" alt="logo de arepamania">
             </div>
 
-            <div>
-                <button type="button" class="modal__close"
-                        id="cerrar-modal">
-                    Cerrar
-                </button>
+            <div class="container-bottom">
+                <div class="container-informacion_usuario">
+                    <div class="top">
+                        <img src="../../MEDIA/user.png" alt="logo de usuario">
+                        <h3>Datos personales</h3>
+                        <hr>
+                    </div>
 
-                <button type="button" class="modal__close"
-                        id="cerrar-sesion">
-                    Cerrar sesión
-                </button>
+                    <div>
+
+                    </div>
+                </div>
             </div>
         </div>
+
+
+            <!--
+                <button type="button" class="modal__close" id="cerrar-modal">Cerrar</button>
+                <button type="button" class="modal__close"id="cerrar-sesion">Cerrar sesión</button> -->
     </section>
 <!-- VENTANA MODAL -->
 

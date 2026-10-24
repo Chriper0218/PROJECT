@@ -60,6 +60,10 @@ th {
     border: none;
 }
 
+tr, th, td {
+    border: none;
+}
+
 th, td {
     padding: 10px;
     border:none;
@@ -69,7 +73,14 @@ th, td {
     width: 27%;
 }
 
-form {
+.container-acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container-form form {
     background-color: rgb(168, 168, 168);
     width: 100%;
     text-align: center;
@@ -94,36 +105,31 @@ input{
     border-radius: 4px;
     border: 2px solid rgb(0, 0, 0);}
 
-.button-editar{
-    background-color:  rgba(0, 0, 0, 0.938);
-    width: 45%;
+.button-editar,
+.button-eliminar {
+    background-color: rgba(0, 0, 0, 0.938);
+    width: 45px;
+    height: 38px;
+    flex-shrink: 0;
     border-radius: 5px;
     padding: 8px;
-    color: rgb(0, 0, 0);
     border: none;
-    cursor: pointer;}
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.button-editar:hover{
+.button-editar:hover,
+.button-eliminar:hover {
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    transform: scale(1.05);}
-
-.button-eliminar{
-    background-color:  rgba(0, 0, 0, 0.938);
-    width: 45%;
-    border-radius: 5px;
-    padding: 8px;
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;}
-
-.button-eliminar:hover{
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    transform: scale(1.05);}
+    transform: scale(1.05);
+}
 
 table td img {
     width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
 
 /* MODAL */
