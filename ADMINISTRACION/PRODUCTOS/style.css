@@ -66,11 +66,18 @@ th, td {
     border:none;
 }
 
+.container-acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
 .container-form  {
     width: 27%;
 }
 
-form {
+.container-form form {
     background-color: rgb(168, 168, 168);
     width: 100%;
     text-align: center;
@@ -111,7 +118,7 @@ input{
 
 .button-eliminar{
     background-color:  rgba(0, 0, 0, 0.938);
-    width: 45%;
+    width: 100%;
     border-radius: 5px;
     padding: 8px;
     color: rgb(0, 0, 0);
@@ -125,7 +132,10 @@ input{
 
 table td img {
     width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
+
 
 
 /* MODAL */

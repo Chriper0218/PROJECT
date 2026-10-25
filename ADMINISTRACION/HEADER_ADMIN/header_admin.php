@@ -211,33 +211,10 @@ header {
     transition: opacity 0.3s ease,
                 visibility 0.3s ease;}
 
-.container-ventana {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    width: 90%;
-    max-width: 500px;
-    max-height: 90vh;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;}
-
 .modal--show {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;}
-
-.container-ventana-informacion {
-    background-color: rgba(56, 56, 56, 0.16);
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    width: 100%;}
 
 .modal__close {
     display: inline-block;
@@ -251,6 +228,261 @@ header {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;}
+
+/* CONTENEDOR PRINCIPAL */
+.container-all {
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 2px solid rgb(221, 170, 1);
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    animation: aparecer 0.3s ease;
+}
+
+/* ENCABEZADO */
+.container-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    background-color: rgb(13, 13, 13);
+    border-bottom: 3px solid rgb(221, 170, 1);
+    border-radius: 12px 12px 0 0;
+}
+
+/* INFORMACIÓN DEL ENCABEZADO */
+.informacion-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* FOTO DEL USUARIO */
+.informacion-header > img {
+    width: 75px;
+    height: 75px;
+    padding: 8px;
+    object-fit: contain;
+    background-color: white;
+    border: 3px solid rgb(221, 170, 1);
+    border-radius: 50%;
+}
+
+/* NOMBRE Y ROL */
+.nombe h2 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.nombe p {
+    color: rgb(221, 170, 1);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* LOGO DE AREPAMANIA */
+.container-top-header > img {
+    width: 110px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* PARTE INFERIOR */
+.container-bottom {
+    padding: 25px;
+    background-color: #ffffff;
+}
+
+/* CONTENEDOR DE INFORMACIÓN */
+.container-informacion_usuario {
+    width: 100%;
+    padding: 22px;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+/* TÍTULO DE DATOS PERSONALES */
+.container-informacion_usuario .top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/* ICONO DEL TÍTULO */
+.container-informacion_usuario .top img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* TEXTO DEL TÍTULO */
+.container-informacion_usuario .top h3 {
+    font-size: 20px;
+    color: rgb(20, 20, 20);
+    white-space: nowrap;
+}
+
+/* LÍNEA DECORATIVA */
+.container-informacion_usuario .top hr {
+    flex: 1;
+    border: none;
+    height: 2px;
+    background-color: rgb(221, 170, 1);
+    margin-left: 8px;
+}
+
+/* DISTRIBUCIÓN DE LOS DATOS */
+.container-datos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* TARJETAS DE INFORMACIÓN */
+.target {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 16px;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.target:hover {
+    background-color: #fffaf0;
+    border-color: rgb(221, 170, 1);
+}
+
+/* ICONOS DE LOS DATOS */
+.target > img {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    object-fit: contain;
+    padding: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+/* CONTENEDOR DEL TEXTO */
+.target > div {
+    min-width: 0;
+}
+
+/* ETIQUETAS */
+.target p:first-child {
+    color: #555555;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+/* INFORMACIÓN DEL USUARIO */
+.target p:last-child {
+    color: #171717;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE PARA TABLETS */
+@media (max-width: 650px) {
+    .container-all {
+        max-height: 95vh;
+    }
+
+    .container-top-header {
+        padding: 20px;
+    }
+
+    .informacion-header > img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nombe h2 {
+        font-size: 19px;
+    }
+
+    .container-top-header > img {
+        width: 85px;
+    }
+
+    .container-bottom {
+        padding: 15px;
+    }
+
+    .container-informacion_usuario {
+        padding: 15px;
+    }
+
+    .container-datos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 380px) {
+    .container-top-header {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .informacion-header {
+        gap: 10px;
+    }
+
+    .informacion-header > img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nombe h2 {
+        font-size: 16px;
+    }
+
+    .nombe p {
+        font-size: 12px;
+    }
+
+    .container-top-header > img {
+        width: 65px;
+    }
+
+    .container-informacion_usuario .top h3 {
+        font-size: 16px;
+    }
+
+    .target {
+        padding: 12px;
+        gap: 10px;
+    }
+}
+/* MODAL */
 
 </style>
 </head>
@@ -294,37 +526,77 @@ header {
 
 <!-- VENTANA MODAL -->
     <section class="modal" id="modal-usuario">
-        <div class="container-ventana">
-            <h2>Hola, Juan</h2>
-            <p>Aquí puedes ver y gestionar tu información.</p>
-
-            <div class="container-ventana-informacion">
-                <div style="display:flex; gap:5px; align-items:center;">
-                    <i data-lucide="user"></i>
-                    <h3>Información personal</h3>
+        <div class="container-all">
+            <div class="container-top-header">
+                <div class="informacion-header">
+                    <img src="../../MEDIA/user.png" alt="imagen-usuario">
+                    <div class="nombe">
+                        <h2>Administrador</h2>
+                        <p>Administrador</p>
+                    </div>
                 </div>
 
-                <br>
-
-                <p>Nombre completo: Juan Perez</p>
-                <br>
-                <p>Correo electrónico: juanperez262215@gmail.com</p>
-                <br>
-                <p>Teléfono: 3006708304</p>
+                <img src="../../MEDIA/NOSOTROS/loguito.png" alt="logo de arepamania">
             </div>
 
-            <div>
-                <button type="button" class="modal__close"
-                        id="cerrar-modal">
-                    Cerrar
-                </button>
+            <div class="container-bottom">
+                <div class="container-informacion_usuario">
+                    <div class="top">
+                        <img src="../../MEDIA/user.png" alt="logo de usuario">
+                        <h3>Datos personales</h3>
+                        <hr>
+                    </div>
 
-                <button type="button" class="modal__close"
-                        id="cerrar-sesion">
-                    Cerrar sesión
-                </button>
+                    <div class="container-datos">
+                        <div class="target">
+                            <img src="../../MEDIA/MODAL/user.png" alt="usuario">
+                            <div>
+                                <p><b>Usuario:</b></p>
+                                <p>Juan Perez</p>
+                            </div>
+                        </div>
+
+                        <div class="target">
+                            <img src="../../MEDIA/MODAL/mail.png" alt="correo">
+                            <div>
+                                <p><b>Correo electronico:</b></p>
+                                <p>juanperez262215@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="target">
+                            <img src="../../MEDIA/MODAL/phone.png" alt="telefono">
+                            <div>
+                                <p><b>Numeo telefonico:</b></p>
+                                <p>+57 300 670 8304</p>
+                            </div>
+                        </div>
+
+                        <div class="target">
+                            <img src="../../MEDIA/MODAL/crown.png" alt="Rol">
+                            <div>
+                                <p><b>Rol:</b></p>
+                                <p>administrador</p>
+                            </div>
+                        </div>
+
+                        <div class="target">
+                            <img src="../../MEDIA/MODAL/calendar-days.png" alt="fecha de registro">
+                            <div>
+                                <p><b>Fecha de registro:</b></p>
+                                <p>25/10/2026</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div style="text-align:center; margin-bottom:2%;">
+                <button type="button" class="modal__close" id="cerrar-modal">Cerrar</button>
+                <button type="button" class="modal__close"id="cerrar-sesion">Cerrar sesión</button>
             </div>
         </div>
+ 
     </section>
 <!-- VENTANA MODAL -->
 

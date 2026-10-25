@@ -66,11 +66,18 @@ th, td {
     border:none;
 }
 
+.container-acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
 .container-form  {
     width: 27%;
 }
 
-form {
+.container-form form {
     background-color: rgb(168, 168, 168);
     width: 100%;
     text-align: center;
@@ -95,15 +102,16 @@ input{
     border-radius: 4px;
     border: 2px solid rgb(0, 0, 0);}
 
-#input-tarea{
+#input-tarea {
     width: 90%;
-    height: 100px;
     font-size: 15px;
     padding: 1%;
     margin-top: 4%;
     border-radius: 4px;
     border: 2px solid rgb(0, 0, 0);
-    text-align: center;}
+    height: 100px;
+    text-align: center;
+}
 
 .button-editar{
     background-color:  rgba(0, 0, 0, 0.938);
@@ -121,7 +129,7 @@ input{
 
 .button-eliminar{
     background-color:  rgba(0, 0, 0, 0.938);
-    width: 45%;
+    width: 100%;
     border-radius: 5px;
     padding: 8px;
     color: rgb(0, 0, 0);
@@ -135,6 +143,8 @@ input{
 
 table td img {
     width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
 
 

@@ -17,35 +17,35 @@ include("../../INCLUDES../HEADER/header.php");
     <div class="container-dad">
         <h1>NUESTRO MENÚ</h1>
             <div class="container-target">
-                <div class="target">
+                <div class="target-menu">
                     <img src="../../MEDIA/MENU/solo_queso.png" alt="arepa solo queso">
                     <p class="name"><b>Solo queso</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
-                <div class="target">
+                <div class="target-menu">
                     <img src="../../MEDIA/MENU/pollo_queso.png" alt="arepa pollo y queso">
                     <p class="name"><b>Pollo y queso</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
-                <div class="target">
+                <div class="target-menu">
                     <img src="../../MEDIA/MENU/carne_queso.png" alt="arepa carne y queso">
                     <p class="name"><b>Carne y queso</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
-                <div class="target">
+                <div class="target-menu">
                     <img src="../../MEDIA/MENU/mixta.png" alt="arepa mixta">
                     <p class="name"><b>Mixta</b></p>
                     <p class="price"><b>6.000$</b></p>
                     <form action=""><button class="button-target">Agregar</button></form>
                 </div>
 
-                <div class="target">
+                <div class="target-menu">
                     <img src="../../MEDIA/MENU/perro_suizo.png" alt="">
                     <p class="name"><b>Mixta</b></p>
                     <p class="price"><b>6.000$</b></p>

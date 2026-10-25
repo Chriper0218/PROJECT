@@ -9,8 +9,8 @@ if (isset($_POST['eliminar'])) {
 
     $ID_PRODUCTO = (int) $_POST['id_producto'];
 
-    $SQL = "DELETE FROM products WHERE ID_PRODUCTO = ?";
-    $STMT = mysqli_prepare($CONEXION, $SQL);
+    $SQL_DELETE = "DELETE FROM products WHERE ID_PRODUCTO = ?";
+    $STMT = mysqli_prepare($CONEXION, $SQL_DELETE);
 
     mysqli_stmt_bind_param($STMT, "i", $ID_PRODUCTO);
 

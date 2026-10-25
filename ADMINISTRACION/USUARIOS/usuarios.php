@@ -3,6 +3,34 @@ include("../../INCLUDES/CONEXION/database.php");
 include("../HEADER_ADMIN/header_admin.php");
 ?>
 
+<?php
+// ELIMINAR PRODUCTOS //
+if (isset($_POST['eliminar'])) {
+
+    $ID_PRODUCTO = (int) $_POST['id_producto'];
+
+    $SQL_DELETE = "DELETE FROM users WHERE ID_USER = ?";
+    $STMT = mysqli_prepare($CONEXION, $SQL_DELETE);
+
+    mysqli_stmt_bind_param($STMT, "i", $ID_PRODUCTO);
+
+    if (mysqli_stmt_execute($STMT)) {
+        mysqli_stmt_close($STMT);
+
+        echo "<script>
+            alert('Producto eliminado exitosamente.');
+            window.location.href = window.location.pathname;
+        </script>";
+        exit;
+
+    } else {
+        echo "Error al eliminar el producto: " . mysqli_stmt_error($STMT);
+        mysqli_stmt_close($STMT);
+    }
+}
+// ELIMINAR PRODUCTOS //
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,8 +80,13 @@ include("../HEADER_ADMIN/header_admin.php");
                 <td><?php echo $ROW['DATE_USER'];?></td>
                 <td><?php echo $ROW['ROL'];?></td>
                 <td>
-                    <button class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
-                    <button class="button-eliminar"><img src="../HEADER_IMAGENES/trash.png" alt="eliminar"></button>
+                    <div class="container-acciones">
+                        <button class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
+                        <form method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este producto?');">
+                            <input type="hidden" name="id_producto" value="<?php echo $ROW['ID_USER']; ?>">
+                            <button type="submit" class="button-eliminar" name="eliminar"><img src="../HEADER_IMAGENES/trash.png" alt="Eliminar"></button>
+                        </form>
+                    </div>
                 </td>
             </tr>
 
