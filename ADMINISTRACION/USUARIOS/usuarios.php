@@ -81,7 +81,12 @@ if (isset($_POST['eliminar'])) {
                 <td><?php echo $ROW['ROL'];?></td>
                 <td>
                     <div class="container-acciones">
-                        <button class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="editar"></button>
+                        
+                        <form action="editar_usuarios.php" method="GET">
+                            <input type="hidden" name="id" value="<?php echo $ROW['ID_USER']; ?>"> 
+                            <button type="submit" class="button-editar"><img src="../HEADER_IMAGENES/pencil.png" alt="Editar"></button>
+                        </form>
+
                         <form method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este producto?');">
                             <input type="hidden" name="id_producto" value="<?php echo $ROW['ID_USER']; ?>">
                             <button type="submit" class="button-eliminar" name="eliminar"><img src="../HEADER_IMAGENES/trash.png" alt="Eliminar"></button>

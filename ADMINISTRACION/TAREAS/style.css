@@ -115,7 +115,7 @@ input{
 
 .button-editar{
     background-color:  rgba(0, 0, 0, 0.938);
-    width: 45%;
+    width: 100%;
     border-radius: 5px;
     padding: 8px;
     color: rgb(0, 0, 0);

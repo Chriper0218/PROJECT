@@ -1,6 +1,5 @@
 <?php
 include("../../INCLUDES../CONEXION/database.php");
-session_start();
 $pagina_actual = basename($_SERVER['PHP_SELF']);
 ?>
 
@@ -344,7 +343,7 @@ header {
 }
 
 /* TARJETAS DE INFORMACIÓN */
-.target {
+.target-modal {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -358,13 +357,13 @@ header {
 }
 
 /* EFECTO AL PASAR EL CURSOR */
-.target:hover {
+.target-modal:hover {
     background-color: #fffaf0;
     border-color: rgb(221, 170, 1);
 }
 
 /* ICONOS DE LOS DATOS */
-.target > img {
+.target-modal > img {
     width: 35px;
     height: 35px;
     flex-shrink: 0;
@@ -375,19 +374,19 @@ header {
 }
 
 /* CONTENEDOR DEL TEXTO */
-.target > div {
+.target-modal > div {
     min-width: 0;
 }
 
 /* ETIQUETAS */
-.target p:first-child {
+.target-modal p:first-child {
     color: #555555;
     font-size: 13px;
     margin-bottom: 6px;
 }
 
 /* INFORMACIÓN DEL USUARIO */
-.target p:last-child {
+.target-modal p:last-child {
     color: #171717;
     font-size: 14px;
     overflow-wrap: anywhere;
@@ -475,7 +474,7 @@ header {
         font-size: 16px;
     }
 
-    .target {
+    .target-modal {
         padding: 12px;
         gap: 10px;
     }
@@ -547,7 +546,7 @@ header {
                     </div>
 
                     <div class="container-datos">
-                        <div class="target">
+                        <div class="target-modal">
                             <img src="../../MEDIA/MODAL/user.png" alt="usuario">
                             <div>
                                 <p><b>Usuario:</b></p>
@@ -555,7 +554,7 @@ header {
                             </div>
                         </div>
 
-                        <div class="target">
+                        <div class="target-modal">
                             <img src="../../MEDIA/MODAL/mail.png" alt="correo">
                             <div>
                                 <p><b>Correo electronico:</b></p>
@@ -563,7 +562,7 @@ header {
                             </div>
                         </div>
 
-                        <div class="target">
+                        <div class="target-modal">
                             <img src="../../MEDIA/MODAL/phone.png" alt="telefono">
                             <div>
                                 <p><b>Numeo telefonico:</b></p>
@@ -571,7 +570,7 @@ header {
                             </div>
                         </div>
 
-                        <div class="target">
+                        <div class="target-modal">
                             <img src="../../MEDIA/MODAL/crown.png" alt="Rol">
                             <div>
                                 <p><b>Rol:</b></p>
@@ -579,7 +578,7 @@ header {
                             </div>
                         </div>
 
-                        <div class="target">
+                        <div class="target-modal">
                             <img src="../../MEDIA/MODAL/calendar-days.png" alt="fecha de registro">
                             <div>
                                 <p><b>Fecha de registro:</b></p>
