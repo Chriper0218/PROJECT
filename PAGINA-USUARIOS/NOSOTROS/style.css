@@ -31,7 +31,7 @@ body {
     background-color: black;}
 
 #p-nosotros { 
-    color: rgb(201, 201, 201); 
+    color: rgb(253, 253, 253); 
     font-size: 26px;}
 
 h1, h2 { 
@@ -104,3 +104,147 @@ h3 {
 .container-bottom-definicion-items img {
     width: 300px;
     height: auto;}
+
+/* RESPONSIVE PARA TABLETS */
+@media screen and (max-width: 1024px) {
+
+    .container-nosotros {
+        background-position: center right;}
+
+    .container-items-nosotros {
+        padding-left: 4%;
+        font-size: 160%;}
+
+    #p-nosotros {
+        font-size: 22px;}
+
+    .container-definicion {
+        padding: 20px;
+        height: auto;
+        min-height: 30vh;}
+
+    .container-definicion p {
+        font-size: 18px;}
+
+    .container-target {
+        gap: 5%;
+        flex-wrap: wrap;}
+
+    .container-bottom-definicion-items {
+        width: 45%;
+        font-size: 16px;}
+
+    .container-img {
+        width: 55%;}
+
+    .container-bottom-definicion-items img {
+        width: 80%;
+        max-width: 300px;}
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media screen and (max-width: 768px) {
+
+    .container-nosotros {
+        background-image: 
+        linear-gradient(
+            to right,
+            rgb(0, 0, 0),
+            rgba(17, 17, 17, 0.945),
+            rgba(20, 20, 20, 0.199)
+        ),
+        url("../../MEDIA/NOSOTROS/background-NOSTROS-MOBILE.png"); 
+        height: auto;
+        min-height: 70vh;
+        padding: 50px 0;
+        background-position: center right;
+        background-size: auto 100%;}
+
+    .container-items-nosotros {
+        padding: 0 5%;
+        font-size: 130%;}
+
+    #p-nosotros {
+        font-size: 19px;}
+
+    .container-dad {
+        height: auto;}
+
+    .container-definicion {
+        height: auto;
+        min-height: 0;
+        padding: 30px 5%;
+        text-align: center;}
+
+    .container-definicion p {
+        font-size: 17px;}
+
+    .container-target {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;}
+
+    .target {
+        width: 100%;}
+
+    .container-bottom-definicion {
+        flex-direction: column;
+        height: auto;}
+
+    .container-bottom-definicion-items {
+        width: 100%;
+        padding: 30px 20px;
+        font-size: 16px;}
+
+    .container-img {
+        width: 100%;}
+
+    #imagen-bottom-definicion {
+        display: block;
+        width: 100%;
+        height: auto;}
+
+    h3 {
+        font-size: 26px;}
+
+    .container-bottom-definicion-items img {
+        width: 70%;
+        max-width: 300px;
+        height: auto;}
+}
+
+/* RESPONSIVE PARA CELULARES PEQUEÑOS */
+@media screen and (max-width: 480px) {
+
+    .container-nosotros {
+        min-height: 60vh;
+        padding: 35px 0;
+        background-position: center right;}
+
+    .container-items-nosotros {
+        padding: 0 6%;
+        font-size: 110%;}
+
+    #p-nosotros {
+        font-size: 16px;}
+
+    .container-definicion {
+        padding: 25px 6%;}
+
+    .container-definicion p {
+        font-size: 16px;}
+
+    .container-target {
+        gap: 25px;
+        padding: 15px;}
+
+    .container-bottom-definicion-items {
+        padding: 25px 15px;
+        font-size: 15px;}
+
+    .container-bottom-definicion-items img {
+        width: 85%;}
+
+    h3 {
+        font-size: 23px;}
+}

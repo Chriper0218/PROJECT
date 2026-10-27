@@ -45,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_stmt_execute($STMT)) {
         mysqli_stmt_close($STMT);
         echo "<script>
-            alert('Tarea actualizada correctamente.');
             window.location.href = 'tareas.php';
         </script>";
         exit;
@@ -124,14 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="hidden" name="id_tarea" value="<?php echo $ROW['ID_TAREA']; ?>">
 
             <label for="titulo">Título de la tarea:</label>
-            <input
-                type="text"
-                id="titulo"
-                name="titulo"
-                maxlength="50"
-                value="<?php echo htmlspecialchars($ROW['TITULO']); ?>"
-                required
-            >
+            <input type="text" id="titulo" name="titulo" maxlength="50" value="<?php echo htmlspecialchars($ROW['TITULO']); ?>" required>
 
             <br><br>
 
@@ -162,8 +154,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" id="tarea" name="tarea" value="<?php echo htmlspecialchars($ROW['TAREA']); ?>" required>
             <br><br>
 
-            <button type="submit" class="guardar">Guardar cambios</button>
-            <a href="tareas.php" class="cancelar">Cancelar</a>
+
+            <div class="container-botones">
+                <button type="submit" class="guardar">Guardar cambios</button>
+                <a href="tareas.php"><button class="cancelar">Cancelar</button></a>
+            </div>
 
         </form>
     </div>

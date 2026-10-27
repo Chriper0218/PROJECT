@@ -523,79 +523,113 @@ header {
 
 
 <!-- VENTANA MODAL -->
-    <section class="modal" id="modal-usuario">
-        <div class="container-all">
-            <div class="container-top-header">
-                <div class="informacion-header">
-                    <img src="../../MEDIA/user.png" alt="imagen-usuario">
-                    <div class="nombe">
-                        <h2>Administrador</h2>
-                        <p>Administrador</p>
-                    </div>
-                </div>
+<section class="modal" id="modal-usuario">
+    <div class="container-all">
 
-                <img src="../../MEDIA/NOSOTROS/loguito.png" alt="logo de arepamania">
-            </div>
+        <div class="container-top-header">
+            <div class="informacion-header">
+                <img src="../../MEDIA/user.png" alt="imagen-usuario">
 
-            <div class="container-bottom">
-                <div class="container-informacion_usuario">
-                    <div class="top">
-                        <img src="../../MEDIA/user.png" alt="logo de usuario">
-                        <h3>Datos personales</h3>
-                        <hr>
-                    </div>
+                <div class="nombe">
+                    <h2>
+                        <?php echo htmlspecialchars($USER['NAME_USER'] ?? 'Usuario'); ?>
+                    </h2>
 
-                    <div class="container-datos">
-                        <div class="target-modal">
-                            <img src="../../MEDIA/MODAL/user.png" alt="usuario">
-                            <div>
-                                <p><b>Usuario:</b></p>
-                                <p>Juan Perez</p>
-                            </div>
-                        </div>
-
-                        <div class="target-modal">
-                            <img src="../../MEDIA/MODAL/mail.png" alt="correo">
-                            <div>
-                                <p><b>Correo electronico:</b></p>
-                                <p>juanperez262215@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="target-modal">
-                            <img src="../../MEDIA/MODAL/phone.png" alt="telefono">
-                            <div>
-                                <p><b>Numeo telefonico:</b></p>
-                                <p>+57 300 670 8304</p>
-                            </div>
-                        </div>
-
-                        <div class="target-modal">
-                            <img src="../../MEDIA/MODAL/crown.png" alt="Rol">
-                            <div>
-                                <p><b>Rol:</b></p>
-                                <p>administrador</p>
-                            </div>
-                        </div>
-
-                        <div class="target-modal">
-                            <img src="../../MEDIA/MODAL/calendar-days.png" alt="fecha de registro">
-                            <div>
-                                <p><b>Fecha de registro:</b></p>
-                                <p>25/10/2026</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <p>
+                        <?php echo htmlspecialchars($USER['ROL'] ?? ''); ?>
+                    </p>
                 </div>
             </div>
-            <div style="text-align:center; margin-bottom:2%;">
-                <button type="button" class="modal__close" id="cerrar-modal">Cerrar</button>
-                <button type="button" class="modal__close"id="cerrar-sesion">Cerrar sesión</button>
+
+            <img src="../../MEDIA/NOSOTROS/loguito.png" alt="logo de arepamania">
+        </div>
+
+        <div class="container-bottom">
+            <div class="container-informacion_usuario">
+
+                <div class="top">
+                    <img src="../../MEDIA/user.png" alt="logo de usuario">
+                    <h3>Datos personales</h3>
+                    <hr>
+                </div>
+
+                <div class="container-datos">
+
+                    <div class="target-modal">
+                        <img src="../../MEDIA/MODAL/user.png" alt="usuario">
+
+                        <div>
+                            <p><b>Usuario:</b></p>
+                            <p>
+                                <?php echo htmlspecialchars($USER['NAME_USER'] ?? ''); ?>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="target-modal">
+                        <img src="../../MEDIA/MODAL/mail.png" alt="correo">
+
+                        <div>
+                            <p><b>Correo electrónico:</b></p>
+                            <p>
+                                <?php echo htmlspecialchars($USER['EMAIL_USER'] ?? ''); ?>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="target-modal">
+                        <img src="../../MEDIA/MODAL/phone.png" alt="teléfono">
+
+                        <div>
+                            <p><b>Número telefónico:</b></p>
+                            <p>
+                                <?php echo htmlspecialchars($USER['NUMBER_USER'] ?? ''); ?>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="target-modal">
+                        <img src="../../MEDIA/MODAL/crown.png" alt="rol">
+
+                        <div>
+                            <p><b>Rol:</b></p>
+                            <p>
+                                <?php echo htmlspecialchars($USER['ROL'] ?? ''); ?>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="target-modal">
+                        <img src="../../MEDIA/MODAL/calendar-days.png" alt="fecha de registro">
+
+                        <div>
+                            <p><b>Fecha de registro:</b></p>
+                            <p>
+                                <?php
+                                echo !empty($USER['FECHA_REGISTRO'])
+                                    ? date('d/m/Y', strtotime($USER['FECHA_REGISTRO']))
+                                    : 'No disponible';
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
- 
-    </section>
+
+        <div style="text-align:center; margin-bottom:2%;">
+            <button type="button" class="modal__close" id="cerrar-modal">
+                Cerrar
+            </button>
+
+            <button type="button" class="modal__close" id="cerrar-sesion">
+                Cerrar sesión
+            </button>
+        </div>
+
+    </div>
+</section>
 <!-- VENTANA MODAL -->
 
 
@@ -669,3 +703,5 @@ header {
 
 </body>
 </html>
+
+

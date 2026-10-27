@@ -506,9 +506,6 @@ header {
 
                 <li><a href="../USUARIOS/usuarios.php"<?php if ($pagina_actual == 'usuarios.php') echo 'aria-current="page"'; ?>>
                 Usuarios</a></li>
-
-                <li><a href="../PEDIDOS/pedidos.php"<?php if ($pagina_actual == 'pedidos.php') echo 'aria-current="page"'; ?>>
-                Pedidos</a></li>
             </ul>
 
             <div class="right-header">
@@ -524,81 +521,7 @@ header {
     <!-- HEADER -->
 
 
-<!-- VENTANA MODAL -->
-    <section class="modal" id="modal-usuario">
-        <div class="container-all">
-            <div class="container-top-header">
-                <div class="informacion-header">
-                    <img src="../../MEDIA/user.png" alt="imagen-usuario">
-                    <div class="nombe">
-                        <h2>Administrador</h2>
-                        <p>Administrador</p>
-                    </div>
-                </div>
 
-                <img src="../../MEDIA/NOSOTROS/loguito.png" alt="logo de arepamania">
-            </div>
-
-            <div class="container-bottom">
-                <div class="container-informacion_usuario">
-                    <div class="top">
-                        <img src="../../MEDIA/user.png" alt="logo de usuario">
-                        <h3>Datos personales</h3>
-                        <hr>
-                    </div>
-
-                    <div class="container-datos">
-                        <div class="target">
-                            <img src="../../MEDIA/MODAL/user.png" alt="usuario">
-                            <div>
-                                <p><b>Usuario:</b></p>
-                                <p>Juan Perez</p>
-                            </div>
-                        </div>
-
-                        <div class="target">
-                            <img src="../../MEDIA/MODAL/mail.png" alt="correo">
-                            <div>
-                                <p><b>Correo electronico:</b></p>
-                                <p>juanperez262215@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="target">
-                            <img src="../../MEDIA/MODAL/phone.png" alt="telefono">
-                            <div>
-                                <p><b>Numeo telefonico:</b></p>
-                                <p>+57 300 670 8304</p>
-                            </div>
-                        </div>
-
-                        <div class="target">
-                            <img src="../../MEDIA/MODAL/crown.png" alt="Rol">
-                            <div>
-                                <p><b>Rol:</b></p>
-                                <p>administrador</p>
-                            </div>
-                        </div>
-
-                        <div class="target">
-                            <img src="../../MEDIA/MODAL/calendar-days.png" alt="fecha de registro">
-                            <div>
-                                <p><b>Fecha de registro:</b></p>
-                                <p>25/10/2026</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div style="text-align:center; margin-bottom:2%;">
-                <button type="button" class="modal__close" id="cerrar-modal">Cerrar</button>
-                <button type="button" class="modal__close"id="cerrar-sesion">Cerrar sesión</button>
-            </div>
-        </div>
- 
-    </section>
-<!-- VENTANA MODAL -->
 
 <!-- MENU -->
     <script>

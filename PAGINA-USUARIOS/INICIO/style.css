@@ -1,19 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;}
 
 html,
 body {
-    width: 100%;
-}
+    width: 100%;}
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
-
+    font-size: 16px;}
 
 /*  MAIN - INICIO */
 
@@ -32,28 +28,22 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center right;
-    background-color: black;
-}
+    background-color: black;}
 
 .container-main-items {
     display: block;
     padding-left: 5%;
-    font-size: 200%;
-}
+    font-size: 200%;}
 
 .container-main-items p {
     color: rgb(201, 201, 201);
-    font-size: 26px;
-}
+    font-size: 26px;}
 
 .h1-yellow {
-    color: rgb(221, 170, 1);
-}
+    color: rgb(221, 170, 1);}
 
 .h1-white {
-    color: rgb(255, 255, 255);
-}
-
+    color: rgb(255, 255, 255);}
 
 /* BOTONES DEL MAIN */
 
@@ -65,18 +55,92 @@ body {
     font-size: 17px;
     border-radius: 5px;
     color: white;
-    cursor: pointer;
-}
+    cursor: pointer;}
 
 .button-main:hover {
     background-color: rgb(221, 170, 1);
     color: black;
     border: none;
-    transform: scale(1.05);
-}
+    transform: scale(1.05);}
 
 .container-buttons {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 20px;}
+
+
+/* RESPONSIVE PARA TABLETS */
+@media screen and (max-width: 1024px) {
+
+    .container-main {
+        background-position: center right;}
+
+    .container-main-items {
+        padding-left: 4%;
+        font-size: 170%;}
+
+    .container-main-items p {
+        font-size: 23px;}
+
+    .container-buttons {
+        flex-wrap: wrap;}
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media screen and (max-width: 768px) {
+
+    .container-main {
+        background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.959),
+            rgba(10, 10, 10, 0.904),
+            rgba(20, 20, 20, 0.199)
+        ),
+        url("../../MEDIA/INICIO/background2-INICIO-MOBILE.png");
+        height: auto;
+        min-height: calc(100vh - 100px);
+        padding: 50px 0;
+        background-size: auto 100%;
+        background-position: center right;}
+
+    .container-main-items {
+        padding: 0 5%;
+        font-size: 140%;}
+
+    .container-main-items p {
+        font-size: 20px;}
+
+    .container-buttons {
+        flex-wrap: wrap;
+        gap: 12px;}
+
+    .button-main {
+        max-width: 100%;}
+}
+
+/* RESPONSIVE PARA CELULARES PEQUEÑOS */
+@media screen and (max-width: 480px) {
+
+    .container-main {
+        min-height: calc(100vh - 100px);
+        padding: 35px 0;
+        background-position: center;}
+
+    .container-main-items {
+        padding: 0 6%;
+        font-size: 110%;}
+
+    .container-main-items p {
+        font-size: 17px;}
+
+    .container-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;}
+
+    .button-main {
+        width: 170px;
+        max-width: 100%;
+        font-size: 15px;}
 }
